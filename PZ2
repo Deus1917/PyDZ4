@@ -1,0 +1,34 @@
+class 22_Avtobus:
+    
+    def __init__(self, speed, maxkol, maxSpeeds, passajirs, svobodapopugaem, seats):
+        self.speed = speed
+        self.maxkol = maxkol
+        self.maxSpeeds = maxSpeeds
+        self.passajirs = passajirs
+        self.svobodapopugaem = svobodapopugaem
+        self.seats = seats
+    def posadka(self):
+        vopros = (input("Что вы хотите сделать: высадить(1) или посадить(2) пассажиров?"))
+        if vopros == 1:
+            vibros = int(input("Сколько вы хотите высадить пассажиров?"))
+            self.svobodapopugaem = svobodapopugaem + vibros
+            print("Было высаженно {vibros} человек, теперь свободно {svobodapopugaem} мест")
+        elif vopros == 2:
+            zaxod = int(input("Сколько вы хотите посадить пассажиров?"))
+            self.svobodapopugaem = svobodapopugaem - zaxod
+            print("Было посажено {zaxod} человек, теперь свободно {svobodapopugaem} мест")
+        else:
+            print("Error, неправильно введены данные, попробуйте заново")
+    def skorost(self):
+        vopros2 = input("Что вы хотите сделать: увеличить(up) или уменьшить(down) скорость?")
+        if vopros2 == "up":
+            speed_up = int(input("Введите значение, на которое хотите увеличить скорость автобуса"))
+            self.speed = speed + speed_up
+            print("Теперь скорость равна {speed} км/ч")
+        elif vopros2 == "down":
+            speed_down = int(input("Введите значение, на которое хотите уменьшить скорость"))
+            self.speed = speed - speed_down
+            print("Теперь скорость равна {spedd} км/ч")
+        else:
+            print("Error, неправильно введены данные, попробуйте снова")
+    def 
